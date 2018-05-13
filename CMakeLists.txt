@@ -37,7 +37,7 @@ if(WIN32)
         TARGET minimal_qt
         POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E env
-            PATH=${QT_DIR}/bin
+            PATH=${_qt5Widgets_install_prefix}/bin
             windeployqt.exe $<$<OR:$<CONFIG:Release>,$<CONFIG:MinSizeRel>,$<CONFIG:RelWithDebInfo>>:--release> $<TARGET_FILE:minimal_qt>
     )
 endif()
