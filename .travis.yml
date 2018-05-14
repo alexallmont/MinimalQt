@@ -6,7 +6,7 @@ os:
 before_install:
  - brew update
  - brew install qt
- - brew link qt
+ - brew link qt --force
 
 before_script:
  - mkdir build
