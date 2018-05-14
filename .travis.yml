@@ -5,11 +5,13 @@ os:
 before_install:
  - brew update
  - brew install qt
+ - brew info qt
 
 before_script:
  - mkdir build
  - cd build
- - export PATH=/usr/local/lib/cmake/Qt5Widgets:$PATH
  - cmake ..
 
-script: make
+script:
+ - make
+ - cat /Users/travis/build/alexallmont/MinimalQt/build/CMakeFiles/CMakeOutput.log
