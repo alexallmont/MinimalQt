@@ -5,7 +5,8 @@ os:
 
 before_install:
  - brew update
- - brew install qt5
+ - brew install qt
+ - brew link qt
 
 before_script:
  - mkdir build
