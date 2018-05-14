@@ -1,16 +1,15 @@
 language: cpp
 os:
  - osx
-sudo: required
 
 before_install:
  - brew update
  - brew install qt
- - brew link qt --force
 
 before_script:
  - mkdir build
  - cd build
+ - export PATH=/usr/local/lib/cmake/Qt5Widgets:$PATH
  - cmake ..
 
 script: make
